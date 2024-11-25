@@ -36,7 +36,7 @@ def main():
             data_pt = {
                 "name": row["topic"],
                 "definition": row["grammar_fix_definition"],
-                "new_name": row["grammar_fix_definition"]
+                "new_name": row["topic"]
             }
         data.append(data_pt)
     df = pd.DataFrame(data)
