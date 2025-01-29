@@ -189,7 +189,6 @@ if __name__ == "__main__":
 
     dummy_phrases = ["weather forecast",
                      "parking space",
-                     "coffee shop",
                      "bus schedule",
                      "post office",
                      "gas station",
@@ -201,7 +200,13 @@ if __name__ == "__main__":
                      "movie ticket",
                      "lunch menu"]
 
+    # TODO CHANGE THIS
+    custom_phrases = ["DEI", "Racial Justice", "Environmental Justice", "Global Warming"]
+
     phrases.extend(dummy_phrases)
+    phrases.extend(custom_phrases)
+
+    phrases = list(set(phrases))
 
     try:
         results = analyze_phrases(
