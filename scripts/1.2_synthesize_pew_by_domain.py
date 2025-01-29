@@ -25,7 +25,9 @@ import numpy as np
 import logging
 import os
 
-logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log", level=logging.INFO, format='%(asctime)s: %(message)s', filemode='w', datefmt='%Y-%m-%d %H:%M:%S', force=True)
+logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log", level=logging.INFO,
+                    format='%(asctime)s: %(message)s', filemode='w', datefmt='%Y-%m-%d %H:%M:%S', force=True)
+
 
 def open_json(file: str):
     """
@@ -151,7 +153,8 @@ if __name__ == "__main__":
     aggd = aggd.rename({'std': 'sd'}, axis=1)
     aggd['domain'] = aggd['domain'].replace({"gender_identity_sexor": "Gender Identity and Sexual Orientation"})
     aggd['domain'] = aggd['domain'].replace({"govt_scope_role": "Government Scope and Role"})
-    aggd['domain'] = aggd['domain'].replace({"gender_family_reproductive_issues": "Gender, Family, and Reproductive Issues"})
+    aggd['domain'] = aggd['domain'].replace(
+        {"gender_family_reproductive_issues": "Gender, Family, and Reproductive Issues"})
 
     aggd['snr'] = aggd['mean'] / aggd['sd']
     aggd.columns = [c.title() for c in aggd.columns]
@@ -163,26 +166,24 @@ if __name__ == "__main__":
     aggd = aggd.sort_values('Mean', ascending=False)
 
     aggd['Domain'] = aggd['Domain'].str.replace('_', ' ').str.title()
-    
+
     # latex table
     latex_output = aggd.to_latex(index=False,
                                  caption='JSD by Pew domain. Higher values indicate greater divergence between Harris and Trump supporters.',
                                  label='jsd_measures',
-                                 escape=False)    
-    
+                                 escape=False)
+
     with open("../tables/pew_summary_stats_by_domain.tex", "w") as f:
         f.write(latex_output)
 
     # write csv
     aggd.to_csv("../data/clean/pew_domain_level_analysis.csv", index=False)
-    
-    # just write the top three domains 
+
+    # just write the top three domains
     top3 = aggd.head(3)['Domain'].to_list()
     logging.info(top3)
     with open("../data/clean/top3_domains.txt", "w") as f:
         for item in top3:
             f.write("%s\n" % item)
-    
-
 
     logging.info(aggd)
