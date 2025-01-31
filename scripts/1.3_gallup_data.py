@@ -15,6 +15,9 @@ Date: 2025-01-31 14:49:06
 
 import pandas as pd
 import logging
+import os
+
+logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log", level=logging.INFO, format='%(asctime)s: %(message)s', filemode='w', datefmt='%Y-%m-%d %H:%M:%S', force=True)
 
 
 def main():
