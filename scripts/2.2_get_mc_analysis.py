@@ -31,6 +31,7 @@ import time
 import logging
 from dotenv import load_dotenv
 import yaml
+
 with open("config.yaml", 'r') as stream: config = yaml.safe_load(stream)
 
 # Global variables
@@ -49,16 +50,16 @@ DUMMY_PHRASES = [
     "lunch menu"
 ]
 
-START_DATE = "2022-01-01"
+START_DATE = "2022-02-01"
 END_DATE = "2025-02-01"
 
 # Setup logging
 logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log",
-                   level=logging.INFO,
-                   format='%(asctime)s: %(message)s',
-                   filemode='w',
-                   datefmt='%Y-%m-%d %H:%M:%S',
-                   force=True)
+                    level=logging.INFO,
+                    format='%(asctime)s: %(message)s',
+                    filemode='w',
+                    datefmt='%Y-%m-%d %H:%M:%S',
+                    force=True)
 
 load_dotenv("../src/.env")
 
@@ -66,9 +67,11 @@ logging.info(f"Starting MediaCloud analysis for datetime pull: {config['datetime
 logging.info(f"Start date: {START_DATE}, End date: {END_DATE}")
 logging.info(f"Dummy phrases: {DUMMY_PHRASES}")
 
+
 def make_controversy_query(phrase):
     """Create a controversy-focused version of a query."""
     return f'"{phrase}" AND (controversial OR controversy OR debate OR debated OR criticize OR criticized)'
+
 
 @retry(
     retry=retry_if_exception_type((requests.exceptions.RequestException, RuntimeError)),
@@ -117,14 +120,16 @@ def query_mediacloud(query_info, collection_id, start_date, end_date, api_key):
             raise requests.exceptions.RequestException("Rate limit")
         return None
 
+
 def batch_queries(queries, batch_size=5):
     """Split queries into batches."""
     for i in range(0, len(queries), batch_size):
         yield queries[i:i + batch_size]
 
+
 def analyze_phrases(phrases, api_key, collection_id=34412234,
-                   start_date=START_DATE, end_date=END_DATE,
-                   max_workers=3, batch_size=5):
+                    start_date=START_DATE, end_date=END_DATE,
+                    max_workers=3, batch_size=5):
     """Analyze phrases using MediaCloud and compute composite scores."""
 
     # Generate queries
@@ -191,8 +196,8 @@ def analyze_phrases(phrases, api_key, collection_id=34412234,
             'total_mentions': base_counts,
             'controversy_mentions': controversy_counts,
             'controversy_ratio': controversy_ratio,
-            'success': (not phrase_data.empty)*1,
-            'is_dummy': (phrase in DUMMY_PHRASES)*1
+            'success': (not phrase_data.empty) * 1,
+            'is_dummy': (phrase in DUMMY_PHRASES) * 1
         })
 
     metrics_df = pd.DataFrame(metrics)
@@ -204,9 +209,9 @@ def analyze_phrases(phrases, api_key, collection_id=34412234,
 
     return metrics_df
 
+
 if __name__ == "__main__":
     logging.info("Starting MediaCloud analysis")
-
 
     # Read unique topics from txt file
     topics_file = f"../data/clean/ai_generated_topics{config['datetime_pull']}_unique_topics.txt"
@@ -221,7 +226,7 @@ if __name__ == "__main__":
     phrases.extend(DUMMY_PHRASES)
     phrases = list(set(phrases))
 
-    #DEBUG
+    # DEBUG
     # phrases = ['parking meter', 'politics']
     logging.info(f"Added {len(DUMMY_PHRASES)} dummy phrases. Total phrases: {len(phrases)}")
 
@@ -234,8 +239,6 @@ if __name__ == "__main__":
         if not results.empty:
             logging.info("\nResults summary:")
             logging.info(f"Total phrases processed: {len(results)}")
-            logging.info(f"Dummy phrases: {len(results[results['is_dummy']])}")
-            logging.info(f"Real topics: {len(results[~results['is_dummy']])}")
 
             output_file = f'../data/clean/mediacloud_analysis{config['datetime_pull']}.csv'
             results.to_csv(output_file, index=False)
@@ -246,11 +249,7 @@ if __name__ == "__main__":
             total_count = len(results)
             logging.info(f"Successfully processed {success_count} out of {total_count} phrases")
 
-            # Log dummy phrase statistics
-            dummy_results = results[results['is_dummy']]
-            logging.info("\nDummy phrase statistics:")
-            logging.info(f"Average controversy ratio: {dummy_results['controversy_ratio'].mean():.3f}")
-            logging.info(f"Median controversy ratio: {dummy_results['controversy_ratio'].median():.3f}")
+
         else:
             logging.info("No results to display")
 

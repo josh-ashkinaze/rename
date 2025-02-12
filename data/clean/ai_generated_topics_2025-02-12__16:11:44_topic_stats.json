@@ -1,0 +1,1314 @@
+[
+  {
+    "topic": "universal basic income",
+    "domains": [
+      "Government Operations",
+      "Macroeconomics",
+      "Social Welfare"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 3,
+    "n_models": 3
+  },
+  {
+    "topic": "defund the police",
+    "domains": [
+      "Civil Rights",
+      "Government Operations",
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 3,
+    "n_models": 2
+  },
+  {
+    "topic": "police brutality",
+    "domains": [
+      "Civil Rights",
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 2,
+    "n_models": 3
+  },
+  {
+    "topic": "family separation",
+    "domains": [
+      "Immigration",
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 2,
+    "n_models": 2
+  },
+  {
+    "topic": "climate change",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 3
+  },
+  {
+    "topic": "deforestation",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 3
+  },
+  {
+    "topic": "quantitative easing",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "fiscal stimulus",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "critical race theory",
+    "domains": [
+      "Civil Rights",
+      "Government Operations"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 2,
+    "n_models": 1
+  },
+  {
+    "topic": "drug pricing",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "vaccine mandates",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "opioid crisis",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "nuclear arms",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "military aid",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "path to citizenship",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "birthright citizenship",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "affirmative action",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "transgender rights",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "renewable energy",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229",
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "inflation targeting",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "mandatory sentencing",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "human rights",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "terrorism",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "international finance",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "resource exploitation",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "medicaid expansion",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-3.5-turbo",
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 2
+  },
+  {
+    "topic": "modern monetary theory",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "wealth tax",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "packing the court",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "voter fraud claims",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "government overreach claims",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "broken windows",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "three strikes",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "stand your ground",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "zero tolerance",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "foreign intervention",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "reparations debate",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "global democracy",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "climate refugees",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "sovereignty dispute",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "single-payer healthcare",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "medicare for all",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "drone strikes",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "guantanamo bay",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "contractor oversight",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "open borders",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "travel ban",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "welfare dependency",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "social safety net",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "living wage",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "child poverty",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "cancel culture",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "carbon emissions",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "fossil fuels",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "claude-3-sonnet-20240229"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "flat tax",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "eminent domain",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "campaign finance",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "term limits",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "filibuster reform",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "capital punishment",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "gun control",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "prison reform",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "foreign aid",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "universal healthcare",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "abortion rights",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "mental health parity",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "nuclear deterrence",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "military spending",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "armed drones",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "cyber warfare",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "base realignment",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "sanctuary cities",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "chain migration",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "dreamers",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "immigration quotas",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "welfare fraud",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "social security solvency",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "child tax credit",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "gay marriage",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "voter id laws",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "fracking",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "carbon tax",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "plastic ban",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "gpt-4-0125-preview"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "economic stimulus",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "public debt",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "fiscal austerity",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "income inequality",
+    "domains": [
+      "Macroeconomics"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "bureaucracy",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "political campaigns",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "tax administration",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "currency",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "scandals",
+    "domains": [
+      "Government Operations"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "legalizing drugs",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "corruption in law enforcement",
+    "domains": [
+      "Law and Crime"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "developing countries",
+    "domains": [
+      "International Affairs"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "health care reform",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "insurance",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "mental health",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "long-term care",
+    "domains": [
+      "Health"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "hazardous waste",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "r&d",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "civilian personnel",
+    "domains": [
+      "Defense"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "border security",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "asylum seekers",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "visa quotas",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "detention centers",
+    "domains": [
+      "Immigration"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "welfare reform",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "food stamps",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "social security benefits",
+    "domains": [
+      "Social Welfare"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "gender discrimination",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "age discrimination",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "voting rights",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "freedom of speech",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "right to privacy",
+    "domains": [
+      "Civil Rights"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "plastic pollution",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  },
+  {
+    "topic": "endangered species",
+    "domains": [
+      "Environment"
+    ],
+    "models": [
+      "gpt-3.5-turbo"
+    ],
+    "n_domains": 1,
+    "n_models": 1
+  }
+]

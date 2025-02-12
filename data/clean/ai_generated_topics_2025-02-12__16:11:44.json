@@ -1,0 +1,392 @@
+[
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Macroeconomics",
+    "raw_response": "TOPICS: [\"Modern Monetary Theory\", \"Universal Basic Income\", \"Quantitative Easing\", \"Fiscal Stimulus\", \"Wealth Tax\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "modern monetary theory",
+      "universal basic income",
+      "quantitative easing",
+      "fiscal stimulus",
+      "wealth tax"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: [\"packing the court\", \"critical race theory\", \"defunding the police\", \"voter fraud claims\", \"government overreach claims\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "packing the court",
+      "critical race theory",
+      "defunding the police",
+      "voter fraud claims",
+      "government overreach claims"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: [\"Defund Police\", \"Broken Windows\", \"Three Strikes\", \"Stand Your Ground\", \"Zero Tolerance\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "defund police",
+      "broken windows",
+      "three strikes",
+      "stand your ground",
+      "zero tolerance"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "International Affairs",
+    "raw_response": "TOPICS: [\"Foreign Intervention\", \"Reparations Debate\", \"Global Democracy\", \"Climate Refugees\", \"Sovereignty Dispute\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "foreign intervention",
+      "reparations debate",
+      "global democracy",
+      "climate refugees",
+      "sovereignty dispute"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Health",
+    "raw_response": "TOPICS: [\"single-payer healthcare\", \"drug pricing\", \"Medicare for All\", \"vaccine mandates\", \"opioid crisis\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "single-payer healthcare",
+      "drug pricing",
+      "medicare for all",
+      "vaccine mandates",
+      "opioid crisis"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Defense",
+    "raw_response": "TOPICS: [\"Nuclear Arms\", \"Military Aid\", \"Drone Strikes\", \"Guantanamo Bay\", \"Contractor Oversight\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "nuclear arms",
+      "military aid",
+      "drone strikes",
+      "guantanamo bay",
+      "contractor oversight"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Immigration",
+    "raw_response": "TOPICS: [\"open borders\", \"path to citizenship\", \"birthright citizenship\", \"family separation\", \"travel ban\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "open borders",
+      "path to citizenship",
+      "birthright citizenship",
+      "family separation",
+      "travel ban"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: [\"Universal Basic Income\", \"Welfare Dependency\", \"Social Safety Net\", \"Living Wage\", \"Child Poverty\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "universal basic income",
+      "welfare dependency",
+      "social safety net",
+      "living wage",
+      "child poverty"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: [\"affirmative action\", \"critical race theory\", \"transgender rights\", \"police brutality\", \"cancel culture\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "affirmative action",
+      "critical race theory",
+      "transgender rights",
+      "police brutality",
+      "cancel culture"
+    ]
+  },
+  {
+    "model": "claude-3-sonnet-20240229",
+    "domain": "Environment",
+    "raw_response": "TOPICS: [\"climate change\", \"carbon emissions\", \"renewable energy\", \"fossil fuels\", \"deforestation\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "climate change",
+      "carbon emissions",
+      "renewable energy",
+      "fossil fuels",
+      "deforestation"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Macroeconomics",
+    "raw_response": "TOPICS: [\"Fiscal Stimulus\", \"Quantitative Easing\", \"Flat Tax\", \"Universal Basic Income\", \"Inflation Targeting\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "fiscal stimulus",
+      "quantitative easing",
+      "flat tax",
+      "universal basic income",
+      "inflation targeting"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: [\"Universal Basic Income\", \"Eminent Domain\", \"Campaign Finance\", \"Term Limits\", \"Filibuster Reform\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "universal basic income",
+      "eminent domain",
+      "campaign finance",
+      "term limits",
+      "filibuster reform"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: [\"Capital Punishment\", \"Gun Control\", \"Mandatory Sentencing\", \"Police Brutality\", \"Prison Reform\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "capital punishment",
+      "gun control",
+      "mandatory sentencing",
+      "police brutality",
+      "prison reform"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "International Affairs",
+    "raw_response": "TOPICS: [\"Foreign Aid\", \"Human Rights\", \"Terrorism\", \"International Finance\", \"Resource Exploitation\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "foreign aid",
+      "human rights",
+      "terrorism",
+      "international finance",
+      "resource exploitation"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Health",
+    "raw_response": "TOPICS: [\"Universal Healthcare\", \"Vaccine Mandates\", \"Abortion Rights\", \"Opioid Crisis\", \"Mental Health Parity\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "universal healthcare",
+      "vaccine mandates",
+      "abortion rights",
+      "opioid crisis",
+      "mental health parity"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Defense",
+    "raw_response": "TOPICS: [\"Nuclear deterrence\", \"Military spending\", \"Armed drones\", \"Cyber warfare\", \"Base realignment\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "nuclear deterrence",
+      "military spending",
+      "armed drones",
+      "cyber warfare",
+      "base realignment"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Immigration",
+    "raw_response": "TOPICS: [\"Sanctuary cities\", \"Chain migration\", \"Birthright citizenship\", \"Dreamers\", \"Immigration quotas\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "sanctuary cities",
+      "chain migration",
+      "birthright citizenship",
+      "dreamers",
+      "immigration quotas"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: [\"Universal Basic Income\", \"Welfare Fraud\", \"Social Security Solvency\", \"Medicaid Expansion\", \"Child Tax Credit\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "universal basic income",
+      "welfare fraud",
+      "social security solvency",
+      "medicaid expansion",
+      "child tax credit"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: [\"Affirmative Action\", \"Gay Marriage\", \"Voter ID Laws\", \"Defund the Police\", \"Transgender Rights\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "affirmative action",
+      "gay marriage",
+      "voter id laws",
+      "defund the police",
+      "transgender rights"
+    ]
+  },
+  {
+    "model": "gpt-4-0125-preview",
+    "domain": "Environment",
+    "raw_response": "TOPICS: [\"Climate Change\", \"Fracking\", \"Carbon Tax\", \"Plastic Ban\", \"Deforestation\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "climate change",
+      "fracking",
+      "carbon tax",
+      "plastic ban",
+      "deforestation"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Macroeconomics",
+    "raw_response": "\nTOPICS: Economic stimulus, Inflation targeting, Public debt, Fiscal austerity, Income inequality",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "economic stimulus",
+      "inflation targeting",
+      "public debt",
+      "fiscal austerity",
+      "income inequality"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: Bureaucracy, Political Campaigns, Tax Administration, Currency, Scandals",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "bureaucracy",
+      "political campaigns",
+      "tax administration",
+      "currency",
+      "scandals"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: \n\n1. Police Brutality\n2. Legalizing Drugs\n3. Mandatory Sentencing\n4. Corruption in Law Enforcement\n5. Family Separation",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "police brutality",
+      "legalizing drugs",
+      "mandatory sentencing",
+      "corruption in law enforcement",
+      "family separation"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "International Affairs",
+    "raw_response": "TOPICS: \n1. Human Rights\n2. Terrorism\n3. Developing Countries\n4. International Finance\n5. Resources Exploitation",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "human rights",
+      "terrorism",
+      "developing countries",
+      "international finance",
+      "resources exploitation"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Health",
+    "raw_response": "TOPICS: Health Care Reform, Insurance, Drug Pricing, Mental Health, Long-term Care",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "health care reform",
+      "insurance",
+      "drug pricing",
+      "mental health",
+      "long-term care"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Defense",
+    "raw_response": "TOPICS: Nuclear Arms, Military Aid, Hazardous Waste, R&D, Civilian Personnel",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "nuclear arms",
+      "military aid",
+      "hazardous waste",
+      "r&d",
+      "civilian personnel"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Immigration",
+    "raw_response": "\nTOPICS: \n1. Border security\n2. Asylum seekers\n3. Visa quotas\n4. Detention centers\n5. Path to citizenship",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "border security",
+      "asylum seekers",
+      "visa quotas",
+      "detention centers",
+      "path to citizenship"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: \n1. Welfare Reform\n2. Universal Basic Income\n3. Food Stamps\n4. Social Security Benefits\n5. Medicaid Expansion",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "welfare reform",
+      "universal basic income",
+      "food stamps",
+      "social security benefits",
+      "medicaid expansion"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: \n1. Gender Discrimination\n2. Age Discrimination\n3. Voting Rights\n4. Freedom of Speech\n5. Right to Privacy",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "gender discrimination",
+      "age discrimination",
+      "voting rights",
+      "freedom of speech",
+      "right to privacy"
+    ]
+  },
+  {
+    "model": "gpt-3.5-turbo",
+    "domain": "Environment",
+    "raw_response": "\nTOPICS: Climate change, Deforestation, Plastic pollution, Endangered species, Renewable energy",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 5 common phrases that describe controversial\ntopics or academic ideas.\n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be currently polarizing\n- Each phrase should be 1-4 words\n- Each phrase should describe an idea that originated in academic or policy contexts\n- We do not want memes or highly 'online' terms\n- We want the shortest and simplest phrases that describe the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient. \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "climate change",
+      "deforestation",
+      "plastic pollution",
+      "endangered species",
+      "renewable energy"
+    ]
+  }
+]
