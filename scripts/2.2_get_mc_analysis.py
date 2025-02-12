@@ -49,8 +49,8 @@ DUMMY_PHRASES = [
     "lunch menu"
 ]
 
-START_DATE = "2024-01-01"
-END_DATE = "2024-01-02"
+START_DATE = "2022-01-01"
+END_DATE = "2025-02-01"
 
 # Setup logging
 logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log",
@@ -63,6 +63,8 @@ logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}
 load_dotenv("../src/.env")
 
 logging.info(f"Starting MediaCloud analysis for datetime pull: {config['datetime_pull']}")
+logging.info(f"Start date: {START_DATE}, End date: {END_DATE}")
+logging.info(f"Dummy phrases: {DUMMY_PHRASES}")
 
 def make_controversy_query(phrase):
     """Create a controversy-focused version of a query."""
