@@ -189,8 +189,8 @@ def analyze_phrases(phrases, api_key, collection_id=34412234,
             'total_mentions': base_counts,
             'controversy_mentions': controversy_counts,
             'controversy_ratio': controversy_ratio,
-            'success': not phrase_data.empty,
-            'is_dummy': phrase in DUMMY_PHRASES
+            'success': (not phrase_data.empty)*1,
+            'is_dummy': (phrase in DUMMY_PHRASES)*1
         })
 
     metrics_df = pd.DataFrame(metrics)
@@ -218,6 +218,9 @@ if __name__ == "__main__":
     # Add dummy phrases
     phrases.extend(DUMMY_PHRASES)
     phrases = list(set(phrases))
+
+    #DEBUG
+    # phrases = ['parking meter', 'politics']
     logging.info(f"Added {len(DUMMY_PHRASES)} dummy phrases. Total phrases: {len(phrases)}")
 
     try:
@@ -232,7 +235,7 @@ if __name__ == "__main__":
             logging.info(f"Dummy phrases: {len(results[results['is_dummy']])}")
             logging.info(f"Real topics: {len(results[~results['is_dummy']])}")
 
-            output_file = '../data/clean/mediacloud_analysis.csv'
+            output_file = f'../data/clean/mediacloud_analysis{config['datetime_pull']}.csv'
             results.to_csv(output_file, index=False)
             logging.info(f"\nSaved results to {output_file}")
 
