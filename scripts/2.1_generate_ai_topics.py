@@ -161,7 +161,8 @@ CONSTRAINTS
 - Each phrase should be 1-4 words
 - Each phrase should describe an idea that originated in academic or policy contexts
 - We do not want memes or highly 'online' terms
-- We want the shortest and simplest phrases that describe the idea. For example, do not say "[thing] policies" when "[thing]", alone, is sufficient. 
+- We want the shortest and simplest phrases that describe the idea. For example, do not say "[thing] policies" when "[thing]", alone, is sufficient
+- Do not use a phrase that includes the name of a specific identity in the name. For example, "transgender rights" or "gay marriage" is not allowed since these include "transgender" and "gay". But "critical race theory" is allowed since it does not name a specific race. 
 
 # Input 
 DOMAIN: The domain
