@@ -50,7 +50,7 @@ DUMMY_PHRASES = [
     "lunch menu"
 ]
 
-START_DATE = "2022-02-01"
+START_DATE = "2024-02-01"
 END_DATE = "2025-02-01"
 
 # Setup logging
@@ -226,9 +226,11 @@ if __name__ == "__main__":
     phrases.extend(DUMMY_PHRASES)
     phrases = list(set(phrases))
 
-    # DEBUG
-    # phrases = ['parking meter', 'politics']
+
     logging.info(f"Added {len(DUMMY_PHRASES)} dummy phrases. Total phrases: {len(phrases)}")
+    # # DEBUG
+    #
+    # phrases = ['parking meter', 'politics']
 
     try:
         results = analyze_phrases(
@@ -240,7 +242,7 @@ if __name__ == "__main__":
             logging.info("\nResults summary:")
             logging.info(f"Total phrases processed: {len(results)}")
 
-            output_file = f'../data/clean/mediacloud_analysis{config['datetime_pull']}.csv'
+            output_file = f'../data/clean/mediacloud_analysis{config['datetime_pull']}_{START_DATE}_{END_DATE}.csv'
             results.to_csv(output_file, index=False)
             logging.info(f"\nSaved results to {output_file}")
 
