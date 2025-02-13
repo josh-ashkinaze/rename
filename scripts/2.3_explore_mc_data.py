@@ -138,12 +138,13 @@ def make_aesthetic(hex_color_list=None,
     return hex_color_list
 
 
-mypal = make_aesthetic()
+mypal = make_aesthetic(font_scale=3)
 
 
 def get_extremes(df, col, n):
     """Get top and bottom n values for a given column."""
     top = df.sort_values(by=[col], ascending=True).head(n)
+    print("Col", col, "Top")
     bottom = df.sort_values(by=[col], ascending=True).tail(n)
     both = pd.concat([top, bottom])
     both = both.sort_values(by=[col], ascending=False)
@@ -157,12 +158,14 @@ def plot_extremes(df, column, n, title=None):
     Returns the figure for saving.
     """
     top = df.nlargest(n, column)
+    print("Col", column, "Top", top['phrase'].to_list())
+
     bottom = df.nsmallest(n, column)
     both = pd.concat([top, bottom])
     both = both.sort_values(by=column, ascending=True)
     mean_val = df[column].mean()
 
-    fig = plt.figure(figsize=(12, 8))
+    fig = plt.figure(figsize=(18, 12))
 
     bars = plt.barh(range(len(both)), both[column])
 
@@ -236,8 +239,8 @@ Effect Size:
     
     """
 
-    fig, ax = plt.subplots(figsize=(12, 8))
-    sns.barplot(data=df, x='control', y='controversy_ratio', ax=ax, errorbar='se')
+    fig, ax = plt.subplots(figsize=(18, 12))
+    sns.barplot(data=df, x='control', y='controversy_ratio', ax=ax)
     plt.ylabel("Controversy Ratio")
     plt.xlabel("")
 
@@ -305,7 +308,7 @@ def main():
     ##################################################
     daily_fn = "../data/clean/mediacloud_daily__2025-02-12__16:11:44_2021-01-01_2025-02-01.csv"
     end_date = daily_fn.split("_")[-1].replace(".csv", "")
-    cutoff_date = '2022-02-01'
+    cutoff_date = '2021-01-01'
     aggd_fn = f"../data/clean/mediacloud_aggregated_{cutoff_date}_{end_date}.csv"
 
     logging.info(f"Reading data from {daily_fn}")
