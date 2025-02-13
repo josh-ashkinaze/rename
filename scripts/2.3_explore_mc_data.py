@@ -72,10 +72,6 @@ def make_aesthetic(hex_color_list=None,
 
     sns.set_palette(sns.color_palette(hex_color_list))
 
-    # Update on
-    # 2024-11-29: I realized I can automatically
-    # clean variable names so i dont have to manually replace underscore
-
     # Enhanced typography settings
     plt.rcParams.update({
         # font settings
@@ -269,33 +265,31 @@ def process_mediacloud_data(input_file, cutoff_date):
     df = pd.read_csv(input_file)
     df['date'] = pd.to_datetime(df['date'])
 
-    # Filter based on cutoff date
+    # 1. Filter based on cutoff date
     cutoff = pd.to_datetime(cutoff_date)
     df = df[df['date'] >= cutoff].copy()
 
-    # First aggregate the mentions for each phrase
+    # 2. aggregate the mentions for each phrase
     agg_df = df.groupby('phrase').agg({
         'total_mentions': 'sum',
         'controversy_mentions': 'sum',
         'is_dummy': 'first'  # carry forward the dummy indicator
     }).reset_index()
 
-    # Calculate controversy ratio on aggregated data
+    # 3. calc controversy ratio on aggregated data
     agg_df['controversy_ratio'] = (
         agg_df['controversy_mentions'] /
         agg_df['total_mentions'].where(agg_df['total_mentions'] > 0, 1)
     ).fillna(0)
 
-    # Now calculate ranks on the aggregated data
+    # 4. now calculate ranks on the aggregated data
     agg_df['mention_rank'] = agg_df['total_mentions'].rank(pct=True)
     agg_df['controversy_rank'] = agg_df['controversy_ratio'].rank(pct=True)
 
-    # Sort by total mentions
-
+    # 5. sort by composite
     agg_df['composite_score'] = 0.5*agg_df['mention_rank'] + 0.5*agg_df['controversy_rank']
     agg_df = agg_df.sort_values('composite_score', ascending=False)
 
-    # Log summary statistics
     logging.info(f"Processed data summary:")
     logging.info(f"Total unique phrases: {len(agg_df)}")
     logging.info(f"Date range used for aggregation: {df['date'].min().date()} to {df['date'].max().date()}")
@@ -315,7 +309,7 @@ def main():
     logging.info(f"Using cutoff date: {cutoff_date}")
 
     df = pd.read_csv(daily_fn)
-    df = process_mediacloud_data(daily_fn, cutoff_date)
+    df = process_mediacloud_data(daily_fn, cutoff_date) # so this will subset `df` to only the data after the cutoff date
     df.to_csv(aggd_fn, index=False)
     print(df.head(10))
     df['control'] = df['is_dummy'].replace({0: 'Candidate Terms', 1: 'Control'})
