@@ -7,14 +7,27 @@ Inputs:
     - data/clean/ai_generated_topics_dt_unique_topics.txt: A txt file with unique topics after deduplication
 
 Outputs:
-    - data/clean/mediacloud_analysis_dt.csv: A CSV file with MediaCloud analysis for each topic containing:
-        - total_mentions: Number of times topic mentioned
-        - controversy_mentions: Number of mentions with controversy-related terms
-        - controversy_ratio: Ratio of controversy mentions to total mentions
-        - mention_rank: Percentile rank of total mentions
-        - controversy_rank: Percentile rank of controversy ratio
-        - composite_score: 0.5 * mention_rank + 0.5 * controversy_rank
-        - is_dummy: Boolean indicating if this is a control phrase
+    - data/clean/mediacloud_raw_dt_START_DATE_END_DATE.csv: Raw mediacloud data
+
+        cols:
+            - date: date of query
+            - total_count: total count of hits
+            - count: count of mentions FOR THAT QUERY
+            - ratio: count/total_count
+            - query: query used
+            - phrase: phrase used
+            - query_type: base or controversy
+            - is_dummy: 1 if phrase is in DUMMY_PHRASES, 0 otherwise
+
+
+    - data/clean/mediacloud_daily_dt_START_DATE_END_DATE.csv: Daily aggregated mediacloud data
+        cols:
+            - date: see above
+            - phrase: see above
+            - total_mentions of phrase on date
+            - controversy_mentions of phrase on date
+            - is_dummy: see above
+
 
 Date: 2025-02-12 17:58:55
 """
@@ -50,7 +63,7 @@ DUMMY_PHRASES = [
     "lunch menu"
 ]
 
-START_DATE = "2024-02-01"
+START_DATE = "2021-01-01"
 END_DATE = "2025-02-01"
 
 # Setup logging
@@ -130,7 +143,7 @@ def batch_queries(queries, batch_size=5):
 def analyze_phrases(phrases, api_key, collection_id=34412234,
                     start_date=START_DATE, end_date=END_DATE,
                     max_workers=3, batch_size=5):
-    """Analyze phrases using MediaCloud and compute composite scores."""
+    """Get MediaCloud data and save both raw and daily aggregated metrics."""
 
     # Generate queries
     queries = []
@@ -173,41 +186,29 @@ def analyze_phrases(phrases, api_key, collection_id=34412234,
 
     if not all_results:
         logging.info("No valid results found")
-        return pd.DataFrame()
+        return None
 
-    # Combine results
-    df = pd.concat(all_results, ignore_index=True)
+    raw_df = pd.concat(all_results, ignore_index=True)
 
-    # Calculate metrics
-    metrics = []
-    for phrase in phrases:
-        phrase_data = df[df['phrase'] == phrase]
+    raw_df['is_dummy'] = raw_df['phrase'].isin(DUMMY_PHRASES).astype(int)
 
-        base_data = phrase_data[phrase_data['query_type'] == 'base']
-        controversy_data = phrase_data[phrase_data['query_type'] == 'controversy']
+    pivot_df = pd.pivot_table(
+        raw_df,
+        values='count',
+        index=['date', 'phrase'],
+        columns='query_type',
+        fill_value=0
+    ).reset_index()
 
-        base_counts = base_data['count'].sum() if not base_data.empty else 0
-        controversy_counts = controversy_data['count'].sum() if not controversy_data.empty else 0
+    pivot_df.columns.name = None
+    pivot_df = pivot_df.rename(columns={
+        'base': 'total_mentions',
+        'controversy': 'controversy_mentions'
+    })
 
-        controversy_ratio = controversy_counts / base_counts if base_counts > 0 else 0
+    pivot_df['is_dummy'] = pivot_df['phrase'].isin(DUMMY_PHRASES).astype(int)
 
-        metrics.append({
-            'phrase': phrase,
-            'total_mentions': base_counts,
-            'controversy_mentions': controversy_counts,
-            'controversy_ratio': controversy_ratio,
-            'success': (not phrase_data.empty) * 1,
-            'is_dummy': (phrase in DUMMY_PHRASES) * 1
-        })
-
-    metrics_df = pd.DataFrame(metrics)
-
-    metrics_df['mention_rank'] = metrics_df['total_mentions'].rank(pct=True)
-    metrics_df['controversy_rank'] = metrics_df['controversy_ratio'].rank(pct=True)
-    metrics_df['composite_score'] = 0.5 * metrics_df['mention_rank'] + 0.5 * metrics_df['controversy_rank']
-    metrics_df = metrics_df.sort_values('composite_score', ascending=False)
-
-    return metrics_df
+    return raw_df, pivot_df
 
 
 if __name__ == "__main__":
@@ -225,12 +226,8 @@ if __name__ == "__main__":
     # Add dummy phrases
     phrases.extend(DUMMY_PHRASES)
     phrases = list(set(phrases))
-
-
     logging.info(f"Added {len(DUMMY_PHRASES)} dummy phrases. Total phrases: {len(phrases)}")
-    # # DEBUG
-    #
-    # phrases = ['parking meter', 'politics']
+
 
     try:
         results = analyze_phrases(
@@ -238,19 +235,32 @@ if __name__ == "__main__":
             api_key=os.environ['MEDIACLOUD_API_KEY']
         )
 
-        if not results.empty:
+        if results is not None:
+            raw_df, daily_df = results
+
             logging.info("\nResults summary:")
-            logging.info(f"Total phrases processed: {len(results)}")
+            logging.info(f"Total phrases processed: {len(raw_df['phrase'].unique())}")
+            logging.info(f"Date range: {raw_df['date'].min()} to {raw_df['date'].max()}")
 
-            output_file = f'../data/clean/mediacloud_analysis{config['datetime_pull']}_{START_DATE}_{END_DATE}.csv'
-            results.to_csv(output_file, index=False)
-            logging.info(f"\nSaved results to {output_file}")
+            # Save raw data
+            raw_output_file = f'../data/clean/mediacloud_raw_{config['datetime_pull']}_{START_DATE}_{END_DATE}.csv'
+            raw_df.to_csv(raw_output_file, index=False)
+            logging.info(f"\nSaved raw results to {raw_output_file}")
 
-            # Print success summary
-            success_count = results['success'].sum()
-            total_count = len(results)
-            logging.info(f"Successfully processed {success_count} out of {total_count} phrases")
+            # Save daily aggregated data
+            daily_output_file = f'../data/clean/mediacloud_daily_{config['datetime_pull']}_{START_DATE}_{END_DATE}.csv'
+            daily_df.to_csv(daily_output_file, index=False)
+            logging.info(f"Saved daily aggregated results to {daily_output_file}")
 
+            # Print summary statistics
+            total_phrases = len(raw_df['phrase'].unique())
+            total_mentions = raw_df[raw_df['query_type'] == 'base']['count'].sum()
+            total_controversy = raw_df[raw_df['query_type'] == 'controversy']['count'].sum()
+
+            logging.info(f"\nSummary Statistics:")
+            logging.info(f"Total unique phrases: {total_phrases}")
+            logging.info(f"Total mentions: {total_mentions}")
+            logging.info(f"Total controversy mentions: {total_controversy}")
 
         else:
             logging.info("No results to display")

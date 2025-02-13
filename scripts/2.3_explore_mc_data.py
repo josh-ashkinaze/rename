@@ -11,6 +11,8 @@ Outputs:
     - plots/mc_analysis_composite_score.pdf: Bar plot of highest and lowest composite scores
     - plots/mc_analysis_controversy_rank.pdf: Bar plot of most and least controversial phrases
     - plots/mc_analysis_mention_rank.pdf: Bar plot of most and least mentioned phrases
+    - data/clean/mediacloud_aggregated_{cutoff_date}_{end_date}.csv: A CSV file with aggregated MediaCloud data. This looks like the old format
+    with cols ['phrase', 'total_mentions', 'controversy_mentions', 'is_dummy', 'controversy_ratio', 'mention_rank', 'controversy_rank', 'composite_score']
 
 Logs:
     Some stats about comparing control and candidate terms on controversy ratio
@@ -249,13 +251,70 @@ def save_plot(fig, name):
     plt.close(fig)
 
 
+def process_mediacloud_data(input_file, cutoff_date):
+    """
+    Process MediaCloud daily data to add aggregate columns.
+
+    Args:
+        input_file (str): Path to input CSV file
+        cutoff_date (str): Cutoff date in YYYY-MM-DD format
+
+    Returns:
+        pd.DataFrame: Processed dataframe with aggregate metrics
+    """
+    logging.info(f"Reading data from {input_file}")
+    df = pd.read_csv(input_file)
+    df['date'] = pd.to_datetime(df['date'])
+
+    # Filter based on cutoff date
+    cutoff = pd.to_datetime(cutoff_date)
+    df = df[df['date'] >= cutoff].copy()
+
+    # First aggregate the mentions for each phrase
+    agg_df = df.groupby('phrase').agg({
+        'total_mentions': 'sum',
+        'controversy_mentions': 'sum',
+        'is_dummy': 'first'  # carry forward the dummy indicator
+    }).reset_index()
+
+    # Calculate controversy ratio on aggregated data
+    agg_df['controversy_ratio'] = (
+        agg_df['controversy_mentions'] /
+        agg_df['total_mentions'].where(agg_df['total_mentions'] > 0, 1)
+    ).fillna(0)
+
+    # Now calculate ranks on the aggregated data
+    agg_df['mention_rank'] = agg_df['total_mentions'].rank(pct=True)
+    agg_df['controversy_rank'] = agg_df['controversy_ratio'].rank(pct=True)
+
+    # Sort by total mentions
+
+    agg_df['composite_score'] = 0.5*agg_df['mention_rank'] + 0.5*agg_df['controversy_rank']
+    agg_df = agg_df.sort_values('composite_score', ascending=False)
+
+    # Log summary statistics
+    logging.info(f"Processed data summary:")
+    logging.info(f"Total unique phrases: {len(agg_df)}")
+    logging.info(f"Date range used for aggregation: {df['date'].min().date()} to {df['date'].max().date()}")
+
+    return agg_df
+
 def main():
     # 1. Read in data
     ##################################################
     ##################################################
-    fn = "../data/clean/mediacloud_analysis_2025-02-12__16:11:44_2022-02-01_2025-02-01.csv"
-    logging.info(f"Reading data from {fn}")
-    df = pd.read_csv(fn)
+    daily_fn = "../data/clean/mediacloud_daily__2025-02-12__16:11:44_2021-01-01_2025-02-01.csv"
+    end_date = daily_fn.split("_")[-1].replace(".csv", "")
+    cutoff_date = '2022-02-01'
+    aggd_fn = f"../data/clean/mediacloud_aggregated_{cutoff_date}_{end_date}.csv"
+
+    logging.info(f"Reading data from {daily_fn}")
+    logging.info(f"Using cutoff date: {cutoff_date}")
+
+    df = pd.read_csv(daily_fn)
+    df = process_mediacloud_data(daily_fn, cutoff_date)
+    df.to_csv(aggd_fn, index=False)
+    print(df.head(10))
     df['control'] = df['is_dummy'].replace({0: 'Candidate Terms', 1: 'Control'})
 
     # 2. Different plots
