@@ -20,7 +20,7 @@ import pandas as pd
 import re
 import logging
 
-from  datetime  import datetime
+from datetime import datetime
 
 
 DT = datetime.now().strftime("%Y-%m-%d__%H:%M:%S")
@@ -33,11 +33,12 @@ load_dotenv("../src/.env")
 
 os.environ['OPENAI_API_KEY'] = os.getenv('OPENAI_API_KEY')
 os.environ['ANTHROPIC_API_KEY'] = os.getenv('ANTHROPIC_API_KEY')
+os.environ['GEMINI_API_KEY'] = os.getenv('GEMINI_API_KEY')
 
 MODELS = [
-    'claude-3-sonnet-20240229',
-    'gpt-4-0125-preview',
-    'gpt-3.5-turbo',
+    'gemini/gemini-2.0-flash',
+    'gpt-4o-2024-08-06',
+    'gpt-4-turbo-2024-04-09',
 ]
 
 logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log", level=logging.INFO, format='%(asctime)s: %(message)s', filemode='w', datefmt='%Y-%m-%d %H:%M:%S', force=True)
@@ -49,6 +50,7 @@ logging.info(MODELS)
 def parse_llm_topics(response_text: str) -> list:
     """
     Parse topics from LLM response text with enhanced robustness.
+    Handles Gemini's code block format and escaped characters.
 
     Args:
         response_text: Raw text response from LLM containing topics
@@ -59,21 +61,44 @@ def parse_llm_topics(response_text: str) -> list:
 
     def clean_topic(topic: str) -> str:
         """Clean individual topic strings."""
+        # Remove code block markers
+        topic = re.sub(r'```\s*', '', topic)
+
+        # Remove escaped quotes
+        topic = re.sub(r'\\"', '"', topic)
+
+        # Basic cleaning as before
         topic = re.sub(r'^\d+\.\s*', '', topic)
         topic = re.sub(r'^[-•*]\s*', '', topic)
         topic = re.split(r'[.:]', topic)[0]
         topic = topic.strip(' "\'[](){}<>')
         topic = re.split(r'\s+[-–]\s+', topic)[0]
 
+        # Remove trailing commas and quotes
+        topic = re.sub(r'",?$', '', topic)
+
         return topic.strip().lower()
 
     def extract_topics_from_text(text: str) -> list:
         """Extract topics from plain text with various formats."""
-        
-        
         potential_topics = []
 
-        # lets try newline split
+        # Handle code blocks first
+        code_block_pattern = r'```(?:json)?\s*(.+?)```'
+        code_blocks = re.findall(code_block_pattern, text, re.DOTALL)
+        if code_blocks:
+            for block in code_blocks:
+                try:
+                    # Try parsing as JSON
+                    data = json.loads(block)
+                    if isinstance(data, dict) and any(k.lower() == 'topics' for k in data.keys()):
+                        topics_key = next(k for k in data.keys() if k.lower() == 'topics')
+                        potential_topics.extend(data[topics_key])
+                        return [clean_topic(t) for t in potential_topics if clean_topic(t)]
+                except json.JSONDecodeError:
+                    continue
+
+        # If no code blocks or JSON parsing failed, try regular text parsing
         lines = [line.strip() for line in text.split('\n') if line.strip()]
         if len(lines) > 1:
             potential_topics.extend(lines)
@@ -89,11 +114,12 @@ def parse_llm_topics(response_text: str) -> list:
 
     response_text = response_text.strip()
 
-    # Try parsing as JSON first
+    # Try parsing as JSON first (for non-code-block JSON)
     try:
         data = json.loads(response_text)
-        if isinstance(data, dict) and 'topics' in data:
-            topics = [clean_topic(t) for t in data['topics']]
+        if isinstance(data, dict) and any(k.lower() == 'topics' for k in data.keys()):
+            topics_key = next(k for k in data.keys() if k.lower() == 'topics')
+            topics = [clean_topic(t) for t in data[topics_key]]
             return [t for t in topics if t]
         elif isinstance(data, list):
             topics = [clean_topic(t) for t in data]
@@ -107,36 +133,40 @@ def parse_llm_topics(response_text: str) -> list:
     if matches:
         for match in matches:
             try:
-                topics = json.loads(f"[{match}]")
+                # Handle both JSON-style and plain comma-separated lists
+                if '"' in match or "'" in match:
+                    topics = json.loads(f"[{match}]")
+                else:
+                    topics = [t.strip() for t in match.split(',')]
                 topics = [clean_topic(t) for t in topics]
                 if len(topics) > 1:
                     return [t for t in topics if t]
             except json.JSONDecodeError:
                 continue
 
-    # response contains "TOPICS:" or similar
+    # Check for "TOPICS:" indicator
     if re.search(r'topics:?\s*', response_text, re.IGNORECASE):
         content = re.split(r'topics:?\s*', response_text, flags=re.IGNORECASE)[-1]
         topics = extract_topics_from_text(content)
         if len(topics) > 1:
             return topics
 
-    #  numbered lists (e.g., "1. topic1\n2. topic2")
+    # Try numbered lists
     numbered_topics = re.findall(r'^\d+\.\s*(.+)$', response_text, re.MULTILINE)
     if len(numbered_topics) > 1:
         topics = [clean_topic(t) for t in numbered_topics]
         return [t for t in topics if t]
 
-    #  bullet points
+    # Try bullet points
     bullet_topics = re.findall(r'[-•*]\s*(.+)(?:\n|$)', response_text)
     if len(bullet_topics) > 1:
         topics = [clean_topic(t) for t in bullet_topics]
         return [t for t in topics if t]
 
-    # fallback: try to extract topics from plain text
+    # Final fallback
     topics = extract_topics_from_text(response_text)
+    return topics if len(topics) > 1 else []
 
-    return topics if len(topics) > 1 else []  
 
 def generate_topics():
     """Main function to generate topics using multiple models."""
@@ -151,18 +181,20 @@ def generate_topics():
 
         for x, row in topics_df.iterrows():
             user_prompt = f"""INSTRUCTIONS
-Given a domain, return a list of 5 common phrases that describe controversial
-topics or academic ideas.
+Given a domain, return a list of 7 common phrases that describe controversial
+topics or ideas. 
 
 CONSTRAINTS
 - Each phrase should be highly popular and has been talked about a lot
+- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language
 - Each phrase should describe a discrete idea and not a general topic
-- Each phrase should be currently polarizing
-- Each phrase should be 1-4 words
-- Each phrase should describe an idea that originated in academic or policy contexts
-- We do not want memes or highly 'online' terms
-- We want the shortest and simplest phrases that describe the idea. For example, do not say "[thing] policies" when "[thing]", alone, is sufficient
-- Do not use a phrase that includes the name of a specific identity in the name. For example, "transgender rights" or "gay marriage" is not allowed since these include "transgender" and "gay". But "critical race theory" is allowed since it does not name a specific race. 
+- Each phrase should be 1-4 words, with widely-known acronyms allowed 
+- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly "online" terms
+- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say "[thing] policies" when "[thing]", alone, is sufficient
+
+AVOID
+- Avoid phrases that include the name of a specific identity. For example, "transgender rights" or "gay marriage" is not allowed since these include "transgender" and "gay". But "critical race theory" is allowed since it does not name a specific race or identity. 
+- Avoid phrases related to atrocities (e.g: "genocide"), hate ideologies (e.g: "terrorism"), human rights violations (e.g.: "torture"), public health misinformation (e.g.: "covid denial"), or where renaming could constitute historical revisionism (e.g.: "slavery") 
 
 # Input 
 DOMAIN: The domain
@@ -170,7 +202,7 @@ DESCRIPTION: A brief description of the domain
 SUBTOPICS: A list of subtopics within the domain
 
 # Expected Output
-TOPICS: A list like ["topic1", "topic2", "topic3", "topic4", "topic5"] and nothing else
+TOPICS: A list like ["topic1", "topic2", "topic3", "topic4", "topic5", "topic6", "topic7"] and nothing else
 
 ###
 DOMAIN: {row['topic_str']}
