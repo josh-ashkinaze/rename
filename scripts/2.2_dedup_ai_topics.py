@@ -114,6 +114,20 @@ def get_topic_stats(data):
     return results
 
 
+def verify_standardization(standardized_data, dedup2standard_dict):
+    """verify that we have successfully standardized topics"""
+    standardized_topics = list(itertools.chain(*[item['topic_list'] for item in standardized_data]))
+
+    # ensure things to be remapped in dedup2standard_dict are remapped in standardized_topics
+    original_terms = set(dedup2standard_dict.keys())
+    remaining_unmapped = original_terms.intersection(set(standardized_topics))
+
+    if remaining_unmapped:
+        logging.error(f"Found terms that should have been mapped but weren't: {remaining_unmapped}")
+        return False
+
+    return True
+
 def save_topic_stats(stats, output_path):
     """Save topic statistics to JSON file"""
     if not stats:
@@ -148,14 +162,28 @@ def main():
     ######################################
     ######################################
     unique_topics = list(set(topic_list))
+    unique_topics = sorted(unique_topics)
+    logging.info("start <LOGGING ALL TOPICS>")
+    for topic in unique_topics:
+        logging.info(f"{topic}")
+    logging.info("end <LOGGING ALL TOPICS>")
+
+
     similar_pairs = find_similar_topics(unique_topics)
     print_similar_topics(similar_pairs)
 
     # Standardize topics
     dedup2standard_dict = {
-        "resources exploitation": "resource exploitation",
+        "affordable care": "affordable care act",
+        "austerity": "austerity measures",
+        "campaign finance": "campaign finance reform",
         "defund police": "defund the police",
-        "defunding the police": "defund the police"
+        "defunding the police": "defund the police",
+        "opioid epidemic": "opioid crisis",
+        "single-payer": "single-payer system",
+        "sustainable logging": "sustainability",
+        "three strikes": "three strikes laws",
+        "three strikes law": "three strikes laws"
     }
 
     standardized_data = []
@@ -170,10 +198,7 @@ def main():
     logging.info(f"Stats after de-duplication {str(new_stats)}")
 
     # Verify standardization worked correctly
-    # Basically, we should have removed the number of unique topics that were similar---or to put it another way
-    # the number of keys in dedup2standard_dict should be equal to the difference in unique topics
-    unique_diff = initial_stats['unique'] - new_stats['unique']
-    assert unique_diff == len(dedup2standard_dict), "Not all similar topics were replaced"
+    assert verify_standardization(standardized_data, dedup2standard_dict), "Standardization verification failed"
     standard_fn = fn.replace(".json", "_standardized.json")
     logging.info(f"Saving standardized topics to {standard_fn}")
     with open(standard_fn, 'w') as f:
