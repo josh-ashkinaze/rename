@@ -2,3 +2,12 @@
 # It corresponds to ai_generated_topics{datetime_pull}.json
 datetime_pull:
   "_2025-02-18__17:12:23"
+
+
+
+# PROMPTS
+########################
+########################
+########################
+llm_topic_generation:
+  "hello"

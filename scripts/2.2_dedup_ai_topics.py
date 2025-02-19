@@ -37,6 +37,8 @@ from collections import defaultdict
 import os 
 import logging
 import yaml
+import pandas as pd
+
 with open("config.yaml", 'r') as stream: config = yaml.safe_load(stream)
 
 
@@ -185,6 +187,18 @@ def main():
         "three strikes": "three strikes laws",
         "three strikes law": "three strikes laws"
     }
+    dedup_df = pd.DataFrame.from_dict(dedup2standard_dict, orient='index', columns=['Standardized Term']).reset_index()
+    dedup_df.index.name = 'Original Term'
+    latex_str = dedup_df.to_latex(
+        caption='Standardizing similar terms',
+        label='tab:dedup_dict',
+        index=False,
+        escape=False,  # don't escape special characters
+        header=['Original Term', 'Standardized Term']  # explicitly set headers
+    )
+    with open("../tables/dedup_dict.tex", "w") as f:
+        f.write(latex_str)
+
 
     standardized_data = []
     for item in data:

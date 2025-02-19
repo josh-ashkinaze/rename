@@ -30,11 +30,17 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as stats
-
+import yaml
 
 logging.basicConfig(filename=f"{os.path.splitext(os.path.basename(__file__))[0]}.log", level=logging.INFO,
                     format='%(asctime)s: %(message)s', filemode='w', datefmt='%Y-%m-%d %H:%M:%S', force=True)
 
+
+
+with open("config.yaml", 'r') as stream: config = yaml.safe_load(stream)
+datetime_pull = config['datetime_pull']
+
+logging.info(f"Starting mc analysis for datetime pull: {datetime_pull}")
 
 def make_aesthetic(hex_color_list=None,
                    with_gridlines=False,
@@ -183,7 +189,7 @@ def plot_extremes(df, column, n, title=None):
     plt.grid(True, axis='x', alpha=0.3)
     plt.tight_layout()
 
-    return fig
+    return fig, top
 
 
 def analyze_controversy_comparison(df, seed=42):
@@ -245,7 +251,7 @@ Effect Size:
 
 def save_plot(fig, name):
     """Save a plot."""
-    filename = f"../plots/mc_analysis_{name}.pdf"
+    filename = f"../plots/mc_analysis{config['datetime_pull']}_{name}.pdf"
     fig.savefig(filename, dpi=300, bbox_inches='tight')
     plt.close(fig)
 
@@ -300,7 +306,7 @@ def main():
     # 1. Read in data
     ##################################################
     ##################################################
-    daily_fn = "../data/clean/mediacloud_daily__2025-02-12__16:11:44_2021-01-01_2025-02-01.csv"
+    daily_fn = "../data/clean/mediacloud_daily__2025-02-12__16:11:44_2021-01-01_2025-02-01.csv".replace("_2025-02-12__16:11:44", f"{datetime_pull}")
     end_date = daily_fn.split("_")[-1].replace(".csv", "")
     cutoff_date = '2021-01-01'
     aggd_fn = f"../data/clean/mediacloud_aggregated_{cutoff_date}_{end_date}.csv"
@@ -321,14 +327,62 @@ def main():
     save_plot(control_fig, "control_comparison")
     logging.info(summary)
 
-    composite_fig = plot_extremes(df, 'composite_score', 10, 'Highest and Lowest Composite Score')
+    composite_fig, composites = plot_extremes(df, 'composite_score', 10, 'Highest and Lowest Composite Score')
     save_plot(composite_fig, "composite_score")
 
-    controversy_fig = plot_extremes(df, 'controversy_rank', 10, 'Most and Least Controversial Phrases')
+    controversy_fig, contros = plot_extremes(df, 'controversy_rank', 10, 'Most and Least Controversial Phrases')
     save_plot(controversy_fig, "controversy_rank")
 
-    mention_fig = plot_extremes(df, 'mention_rank', 10, 'Most and Least Mentioned Phrases')
+    mention_fig, mentions = plot_extremes(df, 'mention_rank', 10, 'Most and Least Mentioned Phrases')
     save_plot(mention_fig, "mention_rank")
+
+    # 3. Save things that are any extreme
+    ##################################################
+    ##################################################
+    N_EXTREMES = 10
+
+    get_top = lambda df, col, n: df.nlargest(n, col)
+
+    # Get tops for each metric
+    df_no_dummy = df[df['is_dummy'] == 0]
+    composites = get_top(df_no_dummy, 'composite_score', N_EXTREMES)
+    contros = get_top(df_no_dummy, 'controversy_rank', N_EXTREMES)
+    mentions = get_top(df_no_dummy, 'mention_rank', N_EXTREMES)
+
+    # Combine all tops
+    any_extreme = pd.concat([composites, contros, mentions])
+    any_extreme = any_extreme.drop_duplicates(subset='phrase')
+    any_extreme = any_extreme.sort_values('composite_score', ascending=False)
+
+    # Create new dataframe with required columns
+    prompt = """CONSTRAINTS
+    - Each phrase should be highly popular and has been talked about a lot
+    - Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language
+    - Each phrase should describe a discrete idea and not a general topic
+    - Each phrase should be 1-4 words, with widely-known acronyms allowed 
+    - Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly "online" terms
+    - Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say "[thing] policies" when "[thing]", alone, is sufficient
+
+    AVOID
+    - Avoid phrases that include the name of a specific identity. For example, "transgender rights" or "gay marriage" is not allowed since these include "transgender" and "gay". But "critical race theory" is allowed since it does not name a specific race or identity. 
+    - Avoid phrases related to atrocities (e.g: "genocide"), hate ideologies (e.g: "terrorism"), human rights violations (e.g.: "torture"), public health misinformation (e.g.: "covid denial"), or where renaming could constitute historical revisionism (e.g.: "slavery")"""
+
+    output_df = pd.DataFrame({
+        'prompt': prompt,
+        'phrase': any_extreme['phrase'],
+        'valid': ''  # Empty valid column
+    })
+
+    if not os.path.exists("../data/annot"):
+        os.makedirs("../data/annot")
+
+    logging.info(f"Saved {len(output_df)} phrases")
+    print(output_df['phrase'].unique())
+
+    annots = ["JA", "JM", "LK", "AP"]
+    for annotator in annots:
+        any_extreme_csv_fn = f"../data/annot/mediacloud_any_extreme_{cutoff_date}_{end_date}_{annotator}_raw.csv"
+        output_df.to_csv(any_extreme_csv_fn, index=False)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,452 @@
+[
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Macroeconomics",
+    "raw_response": "TOPICS: [\"Trickle-down economics\", \"Quantitative easing\", \"Debt ceiling\", \"Fiscal stimulus\", \"Supply-side economics\", \"Austerity\", \"Modern monetary theory\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "trickle-down economics",
+      "quantitative easing",
+      "debt ceiling",
+      "fiscal stimulus",
+      "supply-side economics",
+      "austerity",
+      "modern monetary theory"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: [\"Defunding the police\", \"Voter ID laws\", \"Critical race theory\", \"Eminent domain\", \"Government shutdown\", \"Tax cuts\", \"Campaign finance\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "defunding the police",
+      "voter id laws",
+      "critical race theory",
+      "eminent domain",
+      "government shutdown",
+      "tax cuts",
+      "campaign finance"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: [\"Defund police\", \"Cash bail\", \"School choice\", \"Stand your ground\", \"Qualified immunity\", \"Mandatory minimums\", \"Drug legalization\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "defund police",
+      "cash bail",
+      "school choice",
+      "stand your ground",
+      "qualified immunity",
+      "mandatory minimums",
+      "drug legalization"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "International Affairs",
+    "raw_response": "```json\n{\n  \"TOPICS\": [\n    \"National sovereignty\",\n    \"Climate agreements\",\n    \"Global governance\",\n    \"Trade barriers\",\n    \"Economic sanctions\",\n    \"Border security\",\n    \"Interventionism\"\n  ]\n}\n```",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "national sovereignty",
+      "climate agreements",
+      "global governance",
+      "trade barriers",
+      "economic sanctions",
+      "border security",
+      "interventionism"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Health",
+    "raw_response": "TOPICS: [\"pre-existing conditions\", \"universal healthcare\", \"single-payer\", \"affordable care\", \"health mandate\", \"medicare for all\", \"right to try\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "pre-existing conditions",
+      "universal healthcare",
+      "single-payer",
+      "affordable care",
+      "health mandate",
+      "medicare for all",
+      "right to try"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Defense",
+    "raw_response": "```json\n{\n\"TOPICS\": [\"Military spending\", \"Nuclear deterrence\", \"Use of force\", \"Defense budget\", \"Arms control\", \"Force projection\", \"Civilian casualties\"]\n}\n```",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "military spending",
+      "nuclear deterrence",
+      "use of force",
+      "defense budget",
+      "arms control",
+      "force projection",
+      "civilian casualties"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Immigration",
+    "raw_response": "TOPICS: [\"chain migration\", \"border security\", \"sanctuary cities\", \"DREAMers\", \"open borders\", \"pathway to citizenship\", \"visa lottery\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "chain migration",
+      "border security",
+      "sanctuary cities",
+      "dreamers",
+      "open borders",
+      "pathway to citizenship",
+      "visa lottery"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: [\"welfare state\", \"universal basic income\", \"affordable care act\", \"social security\", \"medicaid expansion\", \"estate tax\", \"school vouchers\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "welfare state",
+      "universal basic income",
+      "affordable care act",
+      "social security",
+      "medicaid expansion",
+      "estate tax",
+      "school vouchers"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: [\"Affirmative action\", \"Systemic racism\", \"Cultural appropriation\", \"Hate speech\", \"Woke\", \"DEI\", \"Critical race theory\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "affirmative action",
+      "systemic racism",
+      "cultural appropriation",
+      "hate speech",
+      "woke",
+      "dei",
+      "critical race theory"
+    ]
+  },
+  {
+    "model": "gemini/gemini-2.0-flash",
+    "domain": "Environment",
+    "raw_response": "TOPICS: [\"Climate change\", \"Environmental justice\", \"Carbon credits\", \"Green energy\", \"Sustainability\", \"Deforestation\", \"Fracking\"]\n",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "climate change",
+      "environmental justice",
+      "carbon credits",
+      "green energy",
+      "sustainability",
+      "deforestation",
+      "fracking"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Macroeconomics",
+    "raw_response": "TOPICS: [\"universal basic income\", \"wealth tax\", \"austerity measures\", \"quantitative easing\", \"fiscal stimulus\", \"central bank independence\", \"supply-side economics\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "universal basic income",
+      "wealth tax",
+      "austerity measures",
+      "quantitative easing",
+      "fiscal stimulus",
+      "central bank independence",
+      "supply-side economics"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: [\"bureaucratic inefficiency\", \"lobbyist influence\", \"federal overreach\", \"gerrymandering\", \"voter ID laws\", \"postal voting\", \"campaign finance reform\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "bureaucratic inefficiency",
+      "lobbyist influence",
+      "federal overreach",
+      "gerrymandering",
+      "voter id laws",
+      "postal voting",
+      "campaign finance reform"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: [\"Defund the Police\", \"Qualified Immunity\", \"Stop and Frisk\", \"Bail Reform\", \"Mandatory Minimums\", \"Three Strikes\", \"War on Drugs\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "defund the police",
+      "qualified immunity",
+      "stop and frisk",
+      "bail reform",
+      "mandatory minimums",
+      "three strikes",
+      "war on drugs"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "International Affairs",
+    "raw_response": "TOPICS: [\"foreign aid\", \"resource exploitation\", \"military intervention\", \"trade imbalance\", \"sovereign debt\", \"climate agreements\", \"nuclear proliferation\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "foreign aid",
+      "resource exploitation",
+      "military intervention",
+      "trade imbalance",
+      "sovereign debt",
+      "climate agreements",
+      "nuclear proliferation"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Health",
+    "raw_response": "TOPICS: [\"universal healthcare\", \"vaccine mandates\", \"assisted suicide\", \"opioid epidemic\", \"drug decriminalization\", \"abortion access\", \"healthcare privatization\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "universal healthcare",
+      "vaccine mandates",
+      "assisted suicide",
+      "opioid epidemic",
+      "drug decriminalization",
+      "abortion access",
+      "healthcare privatization"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Defense",
+    "raw_response": "TOPICS: [\"military-industrial complex\", \"nuclear proliferation\", \"drone warfare\", \"asymmetric warfare\", \"preemptive strike\", \"cyber warfare\", \"arms race\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "military-industrial complex",
+      "nuclear proliferation",
+      "drone warfare",
+      "asymmetric warfare",
+      "preemptive strike",
+      "cyber warfare",
+      "arms race"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Immigration",
+    "raw_response": "TOPICS: [\"Amnesty\", \"Chain migration\", \"Birthright citizenship\", \"Asylum seekers\", \"Sanctuary cities\", \"Green card lotteries\", \"Merit-based immigration\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "amnesty",
+      "chain migration",
+      "birthright citizenship",
+      "asylum seekers",
+      "sanctuary cities",
+      "green card lotteries",
+      "merit-based immigration"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: [\"universal basic income\", \"welfare dependency\", \"merit-based aid\", \"minimum wage\", \"housing first\", \"workfare\", \"school vouchers\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "universal basic income",
+      "welfare dependency",
+      "merit-based aid",
+      "minimum wage",
+      "housing first",
+      "workfare",
+      "school vouchers"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: [\"Affirmative Action\", \"Critical Race Theory\", \"Free Speech\", \"Voter ID Laws\", \"Data Privacy\", \"Cancel Culture\", \"Religious Freedom\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "affirmative action",
+      "critical race theory",
+      "free speech",
+      "voter id laws",
+      "data privacy",
+      "cancel culture",
+      "religious freedom"
+    ]
+  },
+  {
+    "model": "gpt-4o-2024-08-06",
+    "domain": "Environment",
+    "raw_response": "TOPICS: [\"climate change\", \"carbon credits\", \"fracking\", \"green new deal\", \"clean coal\", \"renewable energy\", \"cap and trade\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "climate change",
+      "carbon credits",
+      "fracking",
+      "green new deal",
+      "clean coal",
+      "renewable energy",
+      "cap and trade"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Macroeconomics",
+    "raw_response": "TOPICS: [\"universal basic income\", \"wealth tax\", \"quantitative easing\", \"negative interest rate\", \"fiscal austerity\", \"capital controls\", \"carbon tax\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Macroeconomics\nDESCRIPTION: Includes issues related to general domestic macroeconomic policy.\nSUBTOPICS: Interest Rates, Unemployment Rate, Monetary Policy, National Budget, Tax Code, Industrial Policy, Price Control\n",
+    "topic_list": [
+      "universal basic income",
+      "wealth tax",
+      "quantitative easing",
+      "negative interest rate",
+      "fiscal austerity",
+      "capital controls",
+      "carbon tax"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Government Operations",
+    "raw_response": "TOPICS: [\"fiscal cliff\", \"debt ceiling\", \"executive privilege\", \"government shutdown\", \"dark money\", \"political gerrymandering\", \"super PACs\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Government Operations\nDESCRIPTION: Includes issues related to general government operations, including appropriations for multiple government agencies\nSUBTOPICS: Intergovernmental Relations, Bureaucracy, Postal Service, Employees, Appointments, Currency, Procurement & Contractors, Property Management, Tax Administration, Scandals, Branch Relations, Political Campaigns, Census & Statistics, Capital City, Claims against the government, National Holidays\n",
+    "topic_list": [
+      "fiscal cliff",
+      "debt ceiling",
+      "executive privilege",
+      "government shutdown",
+      "dark money",
+      "political gerrymandering",
+      "super pacs"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Law and Crime",
+    "raw_response": "TOPICS: [\"mandatory sentencing\", \"capital punishment\", \"stop and frisk\", \"bail reform\", \"gun control\", \"civil forfeiture\", \"three strikes law\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Law and Crime\nDESCRIPTION: Includes issues related to general law, crime, and family issues\nSUBTOPICS: Agencies, White Collar Crime, Illegal Drugs, Court Administration, Prisons, Juvenile Crime, Child Abuse, Family Issues, Criminal & Civil Code, Crime Control, Police\n",
+    "topic_list": [
+      "mandatory sentencing",
+      "capital punishment",
+      "stop and frisk",
+      "bail reform",
+      "gun control",
+      "civil forfeiture",
+      "three strikes law"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "International Affairs",
+    "raw_response": "TOPICS: [\"foreign aid\", \"climate change\", \"nuclear proliferation\", \"international sanctions\", \"trade tariffs\", \"sovereignty disputes\", \"migration policy\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: International Affairs\nDESCRIPTION: Includes issues related to general international affairs and foreign aid, including appropriations for general government foreign affairs agencies\nSUBTOPICS: Foreign Aid, Resources Exploitation, Developing Countries, International Finance, Western Europe, Specific Country, Human Rights, Organizations, Terrorism, Diplomats\n",
+    "topic_list": [
+      "foreign aid",
+      "climate change",
+      "nuclear proliferation",
+      "international sanctions",
+      "trade tariffs",
+      "sovereignty disputes",
+      "migration policy"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Health",
+    "raw_response": "TOPICS: [\"Medicare for All\", \"Right to Try\", \"Prescription Drug Pricing\", \"Single-Payer System\", \"Private Health Insurance\", \"Vaccine Mandates\", \"Opioid Crisis\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Health\nDESCRIPTION: Includes issues related generally to health care, including appropriations for general health care government agencies\nSUBTOPICS: Health Care Reform, Insurance, Drug Industry, Medical Facilities, Insurance Providers, Medical Liability, Manpower, Disease Prevention, Infants and Children, Mental Health, Long-term Care, Drug Coverage and Cost, Tobacco Abuse, Drug and Alcohol Abuse, R&D\n",
+    "topic_list": [
+      "medicare for all",
+      "right to try",
+      "prescription drug pricing",
+      "single-payer system",
+      "private health insurance",
+      "vaccine mandates",
+      "opioid crisis"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Defense",
+    "raw_response": "TOPICS: [\"nuclear deterrence\", \"military readiness\", \"intelligence oversight\", \"defense procurement\", \"arms trade\", \"base realignment\", \"drone warfare\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Defense\nDESCRIPTION: Includes issues related generally to defense policy, and appropriations for agencies that oversee general defense policy\nSUBTOPICS: Alliances, Intelligence, Readiness, Nuclear Arms, Military Aid, Personnel Issues, Procurement, Installations & Land, Reserve Forces, Hazardous Waste, Civil, Civilian Personnel, Contractors, Foreign Operations, Claims against Military, R&D\n",
+    "topic_list": [
+      "nuclear deterrence",
+      "military readiness",
+      "intelligence oversight",
+      "defense procurement",
+      "arms trade",
+      "base realignment",
+      "drone warfare"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Immigration",
+    "raw_response": "TOPICS: [\"border wall\", \"sanctuary cities\", \"chain migration\", \"birthright citizenship\", \"immigrant quotas\", \"asylum rules\", \"DACA\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Immigration\nDESCRIPTION: Includes issues related to immigration, refugees, and citizenship\nSUBTOPICS: Immigration\n",
+    "topic_list": [
+      "border wall",
+      "sanctuary cities",
+      "chain migration",
+      "birthright citizenship",
+      "immigrant quotas",
+      "asylum rules",
+      "daca"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Social Welfare",
+    "raw_response": "TOPICS: [\"universal basic income\", \"welfare fraud\", \"Medicaid expansion\", \"food stamps\", \"public housing\", \"minimum wage\", \"child benefit\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Social Welfare\nDESCRIPTION: Includes issues generally related to social welfare policy\nSUBTOPICS: Low-Income Assistance, Elderly Assistance, Disabled Assistance, Volunteer Associations, Child Care\n",
+    "topic_list": [
+      "universal basic income",
+      "welfare fraud",
+      "medicaid expansion",
+      "food stamps",
+      "public housing",
+      "minimum wage",
+      "child benefit"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Civil Rights",
+    "raw_response": "TOPICS: [\"affirmative action\", \"voter ID laws\", \"hate speech\", \"stop and frisk\", \"sanctuary cities\", \"Second Amendment\", \"net neutrality\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Civil Rights\nDESCRIPTION: Includes issues related generally to civil rights and minority rights\nSUBTOPICS: Minority Discrimination, Gender Discrimination, Age Discrimination, Handicap Discrimination, Voting Rights, Freedom of Speech, Right to Privacy, Anti-Government\n",
+    "topic_list": [
+      "affirmative action",
+      "voter id laws",
+      "hate speech",
+      "stop and frisk",
+      "sanctuary cities",
+      "second amendment",
+      "net neutrality"
+    ]
+  },
+  {
+    "model": "gpt-4-turbo-2024-04-09",
+    "domain": "Environment",
+    "raw_response": "TOPICS: [\"clean coal\", \"fracking\", \"emissions trading\", \"net zero\", \"carbon tax\", \"sustainable logging\", \"biofuel subsidies\"]",
+    "user_prompt": "INSTRUCTIONS\nGiven a domain, return a list of 7 common phrases that describe controversial\ntopics or ideas. \n\nCONSTRAINTS\n- Each phrase should be highly popular and has been talked about a lot\n- Each phrase should be currently polarizing in the sense that: (A) It provokes strong disagreement between political groups; (B) The concept can be described in alternative, less charged language\n- Each phrase should describe a discrete idea and not a general topic\n- Each phrase should be 1-4 words, with widely-known acronyms allowed \n- Each phrase should originate from academic, policy, or institutional contexts. That is: We do not want memes or highly \"online\" terms\n- Each phrase should be the shortest and simplest phrase that describes the idea. For example, do not say \"[thing] policies\" when \"[thing]\", alone, is sufficient\n\nAVOID\n- Avoid phrases that include the name of a specific identity. For example, \"transgender rights\" or \"gay marriage\" is not allowed since these include \"transgender\" and \"gay\". But \"critical race theory\" is allowed since it does not name a specific race or identity. \n- Avoid phrases related to atrocities (e.g: \"genocide\"), hate ideologies (e.g: \"terrorism\"), human rights violations (e.g.: \"torture\"), public health misinformation (e.g.: \"covid denial\"), or where renaming could constitute historical revisionism (e.g.: \"slavery\") \n\n# Input \nDOMAIN: The domain\nDESCRIPTION: A brief description of the domain\nSUBTOPICS: A list of subtopics within the domain\n\n# Expected Output\nTOPICS: A list like [\"topic1\", \"topic2\", \"topic3\", \"topic4\", \"topic5\", \"topic6\", \"topic7\"] and nothing else\n\n###\nDOMAIN: Environment\nDESCRIPTION: Includes issues related to general environmental policy, including appropriations for government agencies regulating environmental policy\nSUBTOPICS: Drinking Water, Waste Disposal, Hazardous Waste, Air Pollution, Recycling, Indoor Hazards, Species & Forest, Land and Water Conservation, R&D\n",
+    "topic_list": [
+      "clean coal",
+      "fracking",
+      "emissions trading",
+      "net zero",
+      "carbon tax",
+      "sustainable logging",
+      "biofuel subsidies"
+    ]
+  }
+]
